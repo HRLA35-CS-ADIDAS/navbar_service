@@ -1,0 +1,328 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 2. v2.0 | 20110126
+  License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*
+  ========================================
+  Grid
+  ========================================
+*/
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*
+  ========================================
+  Body
+  ========================================
+*/
+
+body {
+    font-family: AdihausDIN,Helvetica,Arial,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    background-color: #fff;
+    color: #000;
+    -webkit-font-smoothing: antialiased;
+}
+
+div {
+    display: block;
+}
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    background-color: bisque;
+    z-index: 64;
+}
+
+/*
+  ========================================
+  Top Header
+  ========================================
+*/
+
+.header-top{
+    padding: 0 40px;
+    display: block;
+    position: relative;
+    margin-left: 100px;
+    z-index: 20;
+}
+
+.header-top-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 32px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.header-top-container a{
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+/*
+  ========================================
+  Bottom Header
+  ========================================
+*/
+
+.header-bottom{
+    height: 48px;
+    padding-top: 0;
+    background-color: #fff;
+    color: #000;
+    border-bottom: 1px solid #ebedee;
+    position: relative;
+}
+
+.header-bottom-container{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: none;
+}
+
+@media (min-width: 1280px){
+    .header-bottom-container{
+        padding: 0 40px;
+    }
+}
+
+.left-menu-logo{
+    width: 70px;
+    top: -15px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+    /* background-image: ;
+    background-repeat: no-repeat;
+    background-position: 0;
+    background-size: contain; */
+    cursor: pointer;
+}
+
+/*
+  ========================================
+  Main Menu
+  ========================================
+*/
+
+.main-menu{
+    display: flex;
+    padding-left: 40x;
+    position: relative;
+    flex: 1;
+}
+
+@media (min-width: 1280px){
+    .main-menu{
+        display: flex;
+        padding-left: 0;
+        position: relative;
+        flex: 0 0 auto;
+    }
+}
+
+
+.nav-flyout{
+    display: inline-block;
+    height: 45px;
+    margin-top: 3px;
+    user-select: none;
+    border-bottom: 1px solid #ebedee;
+    margin-right: 20px;
+    width: max-content;
+}
+
+.nav-flyout a{
+    font-size: 14px;
+    position: relative;
+    letter-spacing: 1.87px;
+    -webkit-font-smooting: antialiased;
+    line-height: 45px;
+    margin: 0 3px;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    max-height: 999999px;
+}
+
+.menu-department{
+    font-weight: 700;
+}
+
+/*
+  ========================================
+  Search Bar and Shopping Bag
+  ========================================
+*/
+
+.right-side-menu{
+    display: flex;
+    justify-content: flex-end;
+    min-width: 96;
+}
+
+.searchbar-wrapper{
+    position: relative
+}
+
+.searchbar-container{
+    width: 15vw;
+    height: 48px;
+    min-width: 140px;
+    max-width: 300px;
+    padding: 8px 0 8px 30px;
+    position: absolute;
+    right: 0;
+    display: block;
+}
+
+.search-icon{
+    left: inherit;
+    right: 5px;
+    z-index: 47;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    width: 30px;
+    position: absolute;
+    top: 8px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.search-icon-container{
+    object-fit: contain;
+    height: 70%;
+    width: 70%;
+}
+
+.search-icon-container img{
+    height: 100%;
+    width: 100%;
+}
+
+form{
+    width: 100%;
+    display: block;
+    margin-top: 0em;
+}
+
+.search-input{
+    cursor: text;
+    text-align: start;
+    display: inline-block;
+    text-shadow: none;
+    text-indent: 0px;
+    text-transform: none;
+    word-spacing: normal;
+    letter-spacing: normal;
+    text-rendering: auto;
+    -webkit-writing-mode: horizontal-tb !important;
+    outline-offset: -2px;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    margin: 0;
+    outline: none !important;
+    border-radius: 0;
+    width: 100%;
+    padding: 0;
+    height: 32px;
+    line-height: 32px;
+    font-size: 13px;
+    background-color: #ebedee;
+    padding-left: 10px;
+    border: thin solid #ebedee;
+    transition: border 1s ease;
+    border-color: #767677;
+}
+
+.bag-icon{
+    width: 48px;
+    height: 48px;
+    display: block;
+}
+
+.bag-icon-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin-left: 1px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    object-fit: contain;
+}
+
+.bag-icon-container img{
+    height: 54%;
+    width: 54%;
+}
