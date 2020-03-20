@@ -567,6 +567,28 @@ form{
     font-weight: 600;
     margin-bottom: 20px;
 }
+/*
+  ========================================
+  Sign Up Button
+  ========================================
+*/
+
+.footer-signup:active{
+    transform: translate(0);
+}
+
+.footer-signup:active:before{
+    bottom: 0;
+    height: 0;
+    left: 0;
+    border: none;
+}
+
+.footer-signup:active:after{
+    right: 0;
+    top: 0;
+    width: 0;
+}
 
 .footer-signup::before{
     content: "";
@@ -626,6 +648,8 @@ form{
     text-overflow: ellipsis;
 }
 
+/*-------------------*/
+
 .footer-bottom-wrapper{
     display: flex;
     flex-wrap: wrap;
@@ -682,6 +706,10 @@ form{
     line-height: 23px;
     font-size: 13px;
     font-weight: 330;
+}
+
+.content-wrapper ul a:hover{
+    text-decoration: underline;
 }
 
 .assistance{
