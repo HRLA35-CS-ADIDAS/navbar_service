@@ -1,9 +1,5 @@
 const Items = require('./database.js');
-const dataB = require('./index.js');
 const mongoose = require('mongoose');
-
-
-
 
 let mockData = [
     {
@@ -794,8 +790,6 @@ let mockData = [
     }
 ]
 
-
-// let db = mongoose.connection
 const insertAdidasData = function() {
     Items.create(mockData)
       .then(() => mongoose.connection.close())

@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 
 export default class SearchBar extends React.Component {
     constructor() {
@@ -6,13 +7,23 @@ export default class SearchBar extends React.Component {
         this.state = {
             storage: []
         }
+        this.getAllItems = this.getAllItems.bind(this);
     }
 
-    // getAllItems
+    getAllItems(){
+        axios.get('/search')
+            .then((results) => {
+                console.log(results)
+                this.setState({
+                    storage: results.data
+                })
+            })
+            .catch(err=>console.log(err))
+    }
 
-    // componentDidMount(){
-    //     this.getAllItems();
-    // }
+    componentDidMount(){
+        this.getAllItems();
+    }
 
     render() {
         return (
@@ -25,7 +36,7 @@ export default class SearchBar extends React.Component {
                             </div>
                         </div>
                         <form>
-                            <input className="search-input" autocomplete="off" placeholder="Search" />
+                            <input className="search-input" autoComplete="off" placeholder="Search" />
                         </form>
                     </div>
                     <div className="search-results">

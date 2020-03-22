@@ -9,5 +9,7 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '../client/dist')))
 
+app.get('/search', controller.getAll);
+
 
 app.listen(port, ()=>{console.log(`Listening in on port ${port}`)})
