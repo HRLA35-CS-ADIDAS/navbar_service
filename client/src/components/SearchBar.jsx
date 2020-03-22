@@ -1,13 +1,16 @@
 import React from 'react';
+import SearchResult from './SearchResult.jsx'
 import axios from 'axios';
 
 export default class SearchBar extends React.Component {
     constructor() {
         super();
         this.state = {
-            storage: []
+            storage: [],
+            searchFlyout: false
         }
         this.getAllItems = this.getAllItems.bind(this);
+        this.showSearchResults = this.showSearchResults.bind(this);
     }
 
     getAllItems(){
@@ -19,6 +22,18 @@ export default class SearchBar extends React.Component {
                 })
             })
             .catch(err=>console.log(err))
+    }
+
+    showSearchResults(e){
+        if(e.target.value.length > 1){
+            this.setState({
+                searchFlyout: true
+            })
+        }else{
+            this.setState({
+                searchFlyout: false
+            })
+        }
     }
 
     componentDidMount(){
@@ -36,10 +51,12 @@ export default class SearchBar extends React.Component {
                             </div>
                         </div>
                         <form>
-                            <input className="search-input" autoComplete="off" placeholder="Search" />
+                            <input className="search-input" autoComplete="off" placeholder="Search" onChange={this.showSearchResults}/>
                         </form>
                     </div>
-                    <div className="search-results">
+                    {/* --------- */}
+                    <SearchResult searchFlyout={this.state.searchFlyout}/>
+                    {/* <div className="search-results">
                         <div className="search-results-container">
                             <div className="search-results-suggestions">
                                 <ul>
@@ -146,7 +163,8 @@ export default class SearchBar extends React.Component {
                                 </ul>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
+                    {/* --------- */}
                 </div>
                 <div className="bag-icon">
                     <div className="bag-icon-container">
