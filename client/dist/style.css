@@ -83,6 +83,10 @@ a{
     cursor: pointer;
 }
 
+strong{
+    font-weight: 700;
+}
+
 button{
     outline: none;
 }
@@ -347,7 +351,7 @@ button{
 
 /*
   ========================================
-  Search Bar and Shopping Bag
+  Search Bar
   ========================================
 */
 
@@ -434,6 +438,219 @@ form{
     border-color: #767677;
 }
 
+/*
+  ========================================
+  Search Bar Results
+  ========================================
+*/
+
+.search-results{
+    width: 627px;
+    right: 0;
+    top: 47px;
+    font-weight: 400;
+    background-color: #fff;
+    box-shadow: 0 12px 24px rgba(0,0,0,.1);
+    padding: 20px 30px;
+    position: absolute;
+    z-index: 54;
+}
+
+.search-results-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/*
+  ========================================
+  Search Bar Suggestions
+  ========================================
+*/
+
+.search-results-suggestions{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    float: left;
+    padding: 0 15px
+}
+
+.search-results-suggestions ul{
+    padding-bottom: 30px;
+}
+
+.search-results-suggestions-heading{
+    display: block;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.search-results-suggestions li{
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0 0 10px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    width: 100%;
+}
+
+.search-results-suggestions ul li a::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 57;
+}
+
+.search-results-suggestions ul li a{
+    position: relative;
+}
+
+.suggestions-counter{
+    margin-left: 10px;
+    float: right;
+    opacity: .35;
+}
+
+.search-see-all{
+    margin-top: auto;
+    display: inline-block;
+    align-self: flex-start;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    background-color: transparent;
+    line-height: 17px;
+    min-height: 0;
+    padding: 2px 2px 2px;
+    text-align: left;
+    text-decoration: underline;
+    white-space: unset;
+    align-items: center;
+    border-radius: 0;
+    justify-content: flex-start;
+    width: auto;
+}
+
+/*
+  ========================================
+  Search Bar Products
+  ========================================
+*/
+
+.search-results-products{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    float: left;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.search-results-products ul{
+    display: block;
+    float: left;
+    padding: 0;
+    width: 100%;
+    margin: 0;
+}
+
+.search-results-products-heading{
+    font-size: 16px;
+    display: block;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+}
+
+.search-results-products ul li{
+    margin: 0 0 8px;
+}
+
+.search-results-products ul li a::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 57;
+}
+
+.search-results-products ul li a{
+    display: block;
+    height: 90px;
+    position: relative;
+    width: 100%;
+}
+
+.image-container img{
+    height: 90px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 90px;
+}
+
+.search-product-info{
+    padding: 0 0 0 100px;
+}
+
+.search-product-subtitle{
+    display: block;
+    color: #767677;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.search-product-name{
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.search-price-container{
+    font-size: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 400;
+}
+
+.search-price-sale{
+    color: #e32b2b;
+    margin-right: 5px;
+}
+
+.search-price-crossed{
+    color: #767677;
+    margin-right: 0;
+    text-decoration: line-through;
+}
+
+.search-price-original{
+    margin-right: 0;
+    font-weight: 400;
+}
+
+/*
+  ========================================
+  Shopping Bag
+  ========================================
+*/
+
 .bag-icon{
     width: 48px;
     height: 48px;
@@ -456,6 +673,25 @@ form{
 .bag-icon-container img{
     height: 54%;
     width: 54%;
+}
+
+.empty-bag{
+    display: none;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 17px 0;
+    position: absolute;
+    text-align: center;
+    right: 0;
+    top: 100%;
+    width: 310px;
+    z-index: 35;
+    background-color: #fff;
+    box-shadow: 0 12px 24px rgba(0,0,0,.1);
+}
+
+.bag-icon:hover .empty-bag{
+    display: block;
 }
 
 /*

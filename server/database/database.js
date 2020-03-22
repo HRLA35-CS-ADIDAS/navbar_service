@@ -2,10 +2,13 @@ const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
 const adidasSchema = new mongoose.Schema({
+    image: String,
     name: String,
-    color: String,
     type: String,
-    price: Number
+    color: String,
+    price: String,
+    sale_price: String,
+    crossed_price: String
   });
 
 const Items = mongoose.model('Items', adidasSchema);
