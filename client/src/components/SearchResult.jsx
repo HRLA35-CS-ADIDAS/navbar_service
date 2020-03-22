@@ -1,51 +1,14 @@
 import React from 'react';
-import axios from 'axios';
 
 export default class SearchResult extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            storage: [],
-            productStorage: []
-        }
-        // this.getAllItems = this.getAllItems.bind(this);
-        // this.showProducts = this.showProducts.bind(this);
+        this.state = {}
+
         this.renderPrice = this.renderPrice.bind(this);
+        this.renderSuggestion = this.renderSuggestion.bind(this);
     }
 
-    // getAllItems(){
-    //     axios.get('/search')
-    //         .then((results) => {
-    //             this.setState({
-    //                 storage: results.data
-    //             })
-    //         })
-    //         .catch(err=>console.log(err))
-    // }
-
-    // showProducts(){
-    //     let lowerCasedInput = this.props.currentInput.toLowerCase();
-    //     let filteredStorage = [];
-
-    //     for(let item of this.state.storage){
-    //         let lowerCasedName = item.name.toLowerCase();
-    //         let lowerCasedColor = item.color.toLowerCase();
-    //         let lowerCasedType = item.type.toLowerCase();
-    //         if(lowerCasedName.includes(lowerCasedInput) ||
-    //             lowerCasedColor.includes(lowerCasedInput) ||
-    //             lowerCasedType.includes(lowerCasedInput)){
-    //                 filteredStorage.push(item);
-    //             }
-    //     }
-    //     let finalStorage = filteredStorage.slice(0, 4)
-    //     this.setState({
-    //         productStorage: finalStorage
-    //     })
-    // }
-
-    // componentDidMount(){
-    //     this.getAllItems();
-    // }
     renderPrice(item) {
         if (item.sale_price) {
             return (<span>
@@ -57,6 +20,22 @@ export default class SearchResult extends React.Component {
         }
     }
 
+    renderSuggestion(suggestion){
+        // suggestion = ['superstar', 4];
+        // this.props.currentInput = 'upe';
+        // let word = suggestion[0].replace(this.props.currentInput, '<strong>' + this.props.currentInput + '</strong>')
+        let word = suggestion[0];
+        let curr = this.props.currentInput;
+        let currIndex = word.indexOf(curr);
+        let start = word.substring(0, currIndex);
+        let end = word.substring(currIndex + curr.length, word.legnth)
+        return(
+            <span>
+                {start}<strong>{curr}</strong>{end}
+            </span>
+        )
+    }
+
     render() {
         if (this.props.searchFlyout) {
             return (
@@ -65,42 +44,14 @@ export default class SearchResult extends React.Component {
                         <div className="search-results-suggestions">
                             <ul>
                                 <li className="search-results-suggestions-heading">SUGGESTIONS</li>
-                                <li>
-                                    <a>
-                                        <span>
-                                            <strong>nmd r</strong>
-                                                    1
-                                                </span>
-                                        <span className="suggestions-counter">126</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a>
-                                        <span>
-                                            <strong>nmd r</strong>
-                                                    1
-                                                </span>
-                                        <span className="suggestions-counter">126</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a>
-                                        <span>
-                                            <strong>nmd r</strong>
-                                                    1
-                                                </span>
-                                        <span className="suggestions-counter">126</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a>
-                                        <span>
-                                            <strong>nmd r</strong>
-                                                    1
-                                                </span>
-                                        <span className="suggestions-counter">126</span>
-                                    </a>
-                                </li>
+                                    {this.props.suggestionStorage.map((suggestion, index) => (
+                                        <li key={index}>
+                                            <a>
+                                                {this.renderSuggestion(suggestion)}
+                                                <span className="suggestions-counter">{suggestion[1]}</span>
+                                            </a>
+                                        </li>
+                                    ))}
                             </ul>
                             <a className="search-see-all">SEE ALL "search input"</a>
                         </div>
