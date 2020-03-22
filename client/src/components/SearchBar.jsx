@@ -7,36 +7,67 @@ export default class SearchBar extends React.Component {
         super();
         this.state = {
             storage: [],
-            searchFlyout: false
+            searchFlyout: false,
+            currentInput: '',
+            productStorage: []
         }
         this.getAllItems = this.getAllItems.bind(this);
         this.showSearchResults = this.showSearchResults.bind(this);
+        this.preventRefresh = this.preventRefresh.bind(this);
+        this.showProducts = this.showProducts.bind(this);
     }
 
-    getAllItems(){
+    getAllItems() {
         axios.get('/search')
             .then((results) => {
-                console.log(results)
                 this.setState({
                     storage: results.data
                 })
             })
-            .catch(err=>console.log(err))
+            .catch(err => console.log(err))
     }
 
-    showSearchResults(e){
-        if(e.target.value.length > 1){
+    preventRefresh(e) {
+        e.preventDefault();
+    }
+
+    showSearchResults(e) {
+        this.setState({
+            currentInput: e.target.value
+        });
+        setTimeout(this.showProducts, 0)
+        if (e.target.value.length > 1) {
             this.setState({
                 searchFlyout: true
             })
-        }else{
+        } else {
             this.setState({
                 searchFlyout: false
             })
         }
     }
 
-    componentDidMount(){
+    showProducts() {
+        let lowerCasedInput = this.state.currentInput.toLowerCase();
+        let filteredStorage = [];
+
+        for (let item of this.state.storage) {
+            let lowerCasedName = item.name.toLowerCase();
+            let lowerCasedColor = item.color.toLowerCase();
+            let lowerCasedType = item.type.toLowerCase();
+            if (lowerCasedName.includes(lowerCasedInput) ||
+                lowerCasedColor.includes(lowerCasedInput) ||
+                lowerCasedType.includes(lowerCasedInput)) {
+                filteredStorage.push(item);
+            }
+        }
+        let finalStorage = filteredStorage.slice(0, 4)
+        this.setState({
+            productStorage: finalStorage
+        })
+    }
+
+    componentDidMount() {
         this.getAllItems();
     }
 
@@ -50,12 +81,12 @@ export default class SearchBar extends React.Component {
                                 <img src="https://img.icons8.com/ios-filled/50/000000/search.png" />
                             </div>
                         </div>
-                        <form>
-                            <input className="search-input" autoComplete="off" placeholder="Search" onChange={this.showSearchResults}/>
+                        <form onSubmit={this.preventRefresh}>
+                            <input className="search-input" autoComplete="off" placeholder="Search" onChange={this.showSearchResults} />
                         </form>
                     </div>
                     {/* --------- */}
-                    <SearchResult searchFlyout={this.state.searchFlyout}/>
+                    <SearchResult searchFlyout={this.state.searchFlyout} currentInput={this.state.currentInput} productStorage={this.state.productStorage}/>
                     {/* <div className="search-results">
                         <div className="search-results-container">
                             <div className="search-results-suggestions">
