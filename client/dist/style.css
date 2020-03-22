@@ -510,8 +510,9 @@ form{
     position: relative;
 }
 
+
 .suggestions-counter{
-    margin-left: 10px;
+    /* margin-left: 10px; */
     float: right;
     opacity: .35;
 }

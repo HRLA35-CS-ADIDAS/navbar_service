@@ -21,16 +21,13 @@ export default class SearchResult extends React.Component {
     }
 
     renderSuggestion(suggestion){
-        // suggestion = ['superstar', 4];
-        // this.props.currentInput = 'upe';
-        // let word = suggestion[0].replace(this.props.currentInput, '<strong>' + this.props.currentInput + '</strong>')
         let word = suggestion[0];
         let curr = this.props.currentInput;
         let currIndex = word.indexOf(curr);
         let start = word.substring(0, currIndex);
         let end = word.substring(currIndex + curr.length, word.legnth)
         return(
-            <span>
+            <span className="search-suggestion-name">
                 {start}<strong>{curr}</strong>{end}
             </span>
         )
@@ -53,7 +50,7 @@ export default class SearchResult extends React.Component {
                                         </li>
                                     ))}
                             </ul>
-                            <a className="search-see-all">SEE ALL "search input"</a>
+                            <a className="search-see-all">SEE ALL "{this.props.currentInput}"</a>
                         </div>
                         <div className="search-results-products">
                             <ul>
@@ -74,63 +71,6 @@ export default class SearchResult extends React.Component {
                                         </a>
                                     </li>
                                 ))}
-                                {/* <li>
-                                    <a>
-                                        <div className="image-container">
-                                            <img src="https://adidas-fec.s3-us-west-1.amazonaws.com/Shoes/SAMBAROSE1.webp" />
-                                        </div>
-                                        <div className="search-product-info">
-                                            <span className="search-product-subtitle">Women's Originals</span>
-                                            <span className="search-product-name">SAMBAROSE Shoes</span>
-                                            <div className="search-price-container">
-                                                <span className="search-price-sale">$43</span>
-                                                <span className="search-price-crossed">$85</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a>
-                                        <div className="image-container">
-                                            <img src="https://adidas-fec.s3-us-west-1.amazonaws.com/Shoes/NMD_R1_V2.webp" />
-                                        </div>
-                                        <div className="search-product-info">
-                                            <span className="search-product-subtitle">Originals</span>
-                                            <span className="search-product-name">NMD_R1 V2 Shoes</span>
-                                            <div className="search-price-container">
-                                                <span className="search-price-original">$130</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a>
-                                        <div className="image-container">
-                                            <img src="https://adidas-fec.s3-us-west-1.amazonaws.com/Shoes/NMD_R1_V2.webp" />
-                                        </div>
-                                        <div className="search-product-info">
-                                            <span className="search-product-subtitle">Originals</span>
-                                            <span className="search-product-name">NMD_R1 V2 Shoes</span>
-                                            <div className="search-price-container">
-                                                <span className="search-price-original">$130</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a>
-                                        <div className="image-container">
-                                            <img src="https://adidas-fec.s3-us-west-1.amazonaws.com/Shoes/NMD_R1_V2.webp" />
-                                        </div>
-                                        <div className="search-product-info">
-                                            <span className="search-product-subtitle">Originals</span>
-                                            <span className="search-product-name">NMD_R1 V2 Shoes</span>
-                                            <div className="search-price-container">
-                                                <span className="search-price-original">$130</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li> */}
                             </ul>
                         </div>
                     </div>
