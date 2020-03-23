@@ -36,7 +36,7 @@ export default class SearchResult extends React.Component {
     render() {
         if (this.props.searchFlyout) {
             return (
-                <div className="search-results" onClick={this.showProducts}>
+                <div className="search-results">
                     <div className="search-results-container">
                         <div className="search-results-suggestions">
                             <ul>

@@ -5,7 +5,7 @@ import BottomHeader from './BottomHeader.jsx';
 const NavBar = () => {
     return (
         <div>
-            <div className="navbar">
+            <div id="navbar">
                 <div className="header-top">
                     <TopHeader />
                 </div>

@@ -91,11 +91,12 @@ button{
     outline: none;
 }
 
-.navbar{
+#navbar{
     position: fixed;
     width: 100%;
     background-color: #fff;
     z-index: 64;
+    transition: top .5s ease .2s;
 }
 
 /*

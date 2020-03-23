@@ -214,7 +214,8 @@
                             <div class="footer-copy-inner">
                                 <div class="footer-country">
                                     <a class="country-selector">
-                                        <img class="country-selector-flag" src="https://adl-foundation.adidas.com/prod/v28.0.0/assets/flags/us.svg"/>
+                                        <img class="country-selector-flag"
+                                            src="https://adl-foundation.adidas.com/prod/v28.0.0/assets/flags/us.svg" />
                                         <span>USA</span>
                                     </a>
                                 </div>
@@ -228,7 +229,9 @@
                                         <li><span class="footer-link-separator">|</span></li>
                                         <li><a>Terms and Conditions</a></li>
                                         <li><span class="footer-link-separator">|</span></li>
-                                        <li><p>© 2020 adidas America Inc.</p></li>
+                                        <li>
+                                            <p>© 2020 adidas America Inc.</p>
+                                        </li>
                                     </ol>
                                 </div>
                             </div>
@@ -237,6 +240,20 @@
                 </div>
             </div>
         </div>
+        <script>
+            var prevScrollpos = window.pageYOffset;
+            window.onscroll = function () {
+                var currentScrollPos = window.pageYOffset;
+                if (prevScrollpos >= 77) {
+                    if (prevScrollpos > currentScrollPos) {
+                        document.getElementById("navbar").style.top = "0px";
+                    } else {
+                        document.getElementById("navbar").style.top = "-80px";
+                    }
+                }
+                prevScrollpos = currentScrollPos;
+            }
+        </script>
         <script src="./bundle.js"></script>
 </body>
 
