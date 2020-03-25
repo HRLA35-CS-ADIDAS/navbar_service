@@ -8,7 +8,7 @@ const SportsMenu = () => {
                 <div className="flyout-content-container">
                     <div className="flyout-col">
                         <div className="flyout-headline">RUNNING</div>
-                        <img src="https://www.adidas.com/on/demandware.static/-/Sites-adidas-US-Library/en_US/dwfe46dc5d/_other/_UB20_nav-jan152020-v2.jpg" />
+                        <img src="https://adidas-fec.s3-us-west-1.amazonaws.com/Static+Images/menu-running.jpg" />
                         <ul>
                             <li><a>Shoes</a></li>
                             <li><a>Clothing</a></li>
@@ -25,7 +25,7 @@ const SportsMenu = () => {
                     </div>
                     <div className="flyout-col">
                         <div className="flyout-headline">SOCCER</div>
-                        <img src="https://www.adidas.com/on/demandware.static/-/Sites-adidas-US-Library/en_US/dw0ca9fc7f/_other/football-ss20-mutator-nav.jpg" />
+                        <img src="https://adidas-fec.s3-us-west-1.amazonaws.com/Static+Images/menu-soccer.jpg" />
                         <ul>
                             <li><a>Shoes</a></li>
                             <li><a>Clothing</a></li>
@@ -42,7 +42,7 @@ const SportsMenu = () => {
                     </div>
                     <div className="flyout-col">
                         <div className="flyout-headline">OUTDOOR</div>
-                        <img src="https://www.adidas.com/on/demandware.static/-/Sites-adidas-US-Library/en_US/dw598f16c3/_other/_navigation/outdoor_navbar.jpg" />
+                        <img src="https://adidas-fec.s3-us-west-1.amazonaws.com/Static+Images/menu-outdoor.jpg" />
                         <ul>
                             <li><a>Shoes</a></li>
                             <li><a>Clothing</a></li>
@@ -60,7 +60,7 @@ const SportsMenu = () => {
                     </div>
                     <div className="flyout-col">
                         <div className="flyout-headline">BASKETBALL</div>
-                        <img src="https://www.adidas.com/on/demandware.static/-/Sites-adidas-US-Library/en_US/dwda4c6d8d/_other/_navigation/basketball-nav-image-harden-vol-4.jpg" />
+                        <img src="https://adidas-fec.s3-us-west-1.amazonaws.com/Static+Images/menu-basketball.jpg" />
                         <ul>
                             <li><a>Shoes</a></li>
                             <li><a>Clothing</a></li>
@@ -75,7 +75,7 @@ const SportsMenu = () => {
                     </div>
                     <div className="flyout-col">
                         <div className="flyout-headline">BASEBALL</div>
-                        <img src="https://www.adidas.com/on/demandware.static/-/Sites-adidas-US-Library/en_US/dwba739387/_other/Baseball-Navigation-Image.png" />
+                        <img src="https://adidas-fec.s3-us-west-1.amazonaws.com/Static+Images/menu-baseball.png" />
                         <ul>
                             <li><a>Shoes</a></li>
                             <li><a>Clothing</a></li>

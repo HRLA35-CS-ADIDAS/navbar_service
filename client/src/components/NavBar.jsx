@@ -39,11 +39,11 @@ export default class NavBar extends React.Component {
                 <div className="promo-bar">
                     <div className="promo-container">
                         <div className="promo-element">
-                            <img id="truck-logo" src="https://img.icons8.com/windows/50/000000/in-transit.png" />
+                            <img id="truck-logo" src="https://adidas-fec.s3-us-west-1.amazonaws.com/Static+Images/shipping-truck.png" />
                             <div className="promo-item">FREE SHIPPING OVER $49 AND FREE RETURNS</div>
                         </div>
                         <div className="promo-element">
-                            <img src="https://www.freepnglogos.com/uploads/adidas-logo-png-black-0.png" />
+                            <img src="https://adidas-fec.s3-us-west-1.amazonaws.com/Static+Images/adidas-logo-png-black-0.png" />
                             <div className="promo-item">JOIN THE ADIDAS CREATORS CLUB</div>
                         </div>
                     </div>

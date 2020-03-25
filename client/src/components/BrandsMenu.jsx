@@ -7,8 +7,8 @@ const BrandsMenu = () => {
             <div className="flyout-content">
                 <div className="flyout-content-container">
                     <div className="flyout-col">
-                        <img src="https://www.adidas.com/on/demandware.static/-/Sites-adidas-US-Library/en_US/dwabfb8a06/_other/_navigation/text_originals.png" />
-                        <img src="https://www.adidas.com/on/demandware.static/-/Sites-adidas-US-Library/en_US/dw57d70736/_other/_navigation/OG-Superstar-Top_Nav.jpg" />
+                        <img src="https://adidas-fec.s3-us-west-1.amazonaws.com/Static+Images/menu-originals-header.png" />
+                        <img src="https://adidas-fec.s3-us-west-1.amazonaws.com/Static+Images/menu-originals.jpg" />
                         <ul>
                             <li><a>Shoes</a></li>
                             <li><a>Clothing</a></li>
@@ -23,8 +23,8 @@ const BrandsMenu = () => {
                         </ul>
                     </div>
                     <div className="flyout-col">
-                        <img src="https://www.adidas.com/on/demandware.static/-/Sites-adidas-US-Library/en_US/dw8d45550a/_other/IVP_Mega-Menu-Brand-Asset_NEWrezized.jpg" />
-                        <img src="https://www.adidas.com/on/demandware.static/-/Sites-adidas-US-Library/en_US/dw7010be60/_other/IvyPark-Nav-UI.jpg" />
+                        <img src="https://adidas-fec.s3-us-west-1.amazonaws.com/Static+Images/menu-ivy-park-header.jpg" />
+                        <img src="https://adidas-fec.s3-us-west-1.amazonaws.com/Static+Images/menu-ivy-park.jpg" />
                         <ul>
                             <li><a>Shoes</a></li>
                             <li><a>Clothing</a></li>
@@ -34,8 +34,8 @@ const BrandsMenu = () => {
                         </ul>
                     </div>
                     <div className="flyout-col">
-                        <img src="https://www.adidas.com/on/demandware.static/-/Sites-adidas-US-Library/en_US/dw6cf95e68/_other/_navigation/SM.png" />
-                        <img src="https://www.adidas.com/on/demandware.static/-/Sites-adidas-US-Library/en_US/dwf0e44eee/_other/thumbnail-asmc-ss20-boxfit.jpg" />
+                        <img src="https://adidas-fec.s3-us-west-1.amazonaws.com/Static+Images/menu-stella-mccartney-header.png" />
+                        <img src="https://adidas-fec.s3-us-west-1.amazonaws.com/Static+Images/menu-stella-mccartney.jpg" />
                         <ul>
                             <li><a>Shoes</a></li>
                             <li><a>Clothing</a></li>
@@ -47,15 +47,15 @@ const BrandsMenu = () => {
                         </ul>
                     </div>
                     <div className="flyout-col">
-                        <img src="https://www.adidas.com/on/demandware.static/-/Sites-adidas-US-Library/en_US/dwa1dea590/_other/Y-3_LOGO_CARD.png" />
-                        <img src="https://www.adidas.com/on/demandware.static/-/Sites-adidas-US-Library/en_US/dw86e32852/_other/Y-3-SS20-Drop_3-Brand_card-mar05.jpg" />
+                        <img src="https://adidas-fec.s3-us-west-1.amazonaws.com/Static+Images/menu-Y-3-header.png" />
+                        <img src="https://adidas-fec.s3-us-west-1.amazonaws.com/Static+Images/menu-Y-3.jpg" />
                         <ul>
                             <li><a><strong>All Y-3</strong></a></li>
                         </ul>
                     </div>
                     <div className="flyout-col">
-                        <img src="https://www.adidas.com/on/demandware.static/-/Sites-adidas-US-Library/en_US/dwdb192746/_other/Adidas_2020_Sustainability_nav_headline.jpg" />
-                        <img src="https://www.adidas.com/on/demandware.static/-/Sites-adidas-US-Library/en_US/dwe399522a/_other/Adidas_2020_Sustainability_nav_image_europe.jpg" />
+                        <img src="https://adidas-fec.s3-us-west-1.amazonaws.com/Static+Images/menu-sustainability-header.jpg" />
+                        <img src="https://adidas-fec.s3-us-west-1.amazonaws.com/Static+Images/menu-sustainability.jpg" />
                         <ul>
                             <li><a>Products made with ocean plastic</a></li>
                             <li><a>Products made with recycled polyester</a></li>

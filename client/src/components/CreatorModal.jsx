@@ -21,31 +21,29 @@ export default class CreatorModal extends React.Component {
             isBoxChecked: null
         }
 
-        this.resetModal = this.resetModal.bind(this);
+        this.onInput = this.onInput.bind(this);
+        this.outOfInput = this.outOfInput.bind(this);
+        this.changeInput = this.changeInput.bind(this);
         this.showToolTip = this.showToolTip.bind(this);
         this.hideToolTip = this.hideToolTip.bind(this);
         this.changeEmailPos = this.changeEmailPos.bind(this);
         this.changePasswordPos = this.changePasswordPos.bind(this);
         this.returnEmailPos = this.returnEmailPos.bind(this);
         this.returnPasswordPos = this.returnPasswordPos.bind(this);
-        this.changeInput = this.changeInput.bind(this);
+        this.setEmailBlurTrue = this.setEmailBlurTrue.bind(this);
+        this.setPasswordBlurTrue = this.setPasswordBlurTrue.bind(this);
         this.setEmailBlurFalse = this.setEmailBlurFalse.bind(this);
+        this.setPasswordBlurFalse = this.setPasswordBlurFalse.bind(this);
         this.setEmailErr = this.setEmailErr.bind(this);
         this.setPasswordErr = this.setPasswordErr.bind(this);
         this.validateEmail = this.validateEmail.bind(this);
-        this.checkSuccessEmail = this.checkSuccessEmail.bind(this);
-        this.onInput = this.onInput.bind(this);
-        this.outOfInput = this.outOfInput.bind(this);
-        this.setEmailBlurTrue = this.setEmailBlurTrue.bind(this);
-        this.checkSuccessPassword = this.checkSuccessPassword.bind(this);
-        this.renderGreenCheckPassword = this.renderGreenCheckPassword.bind(this);
         this.validatePassword = this.validatePassword.bind(this);
-        this.setPasswordBlurTrue = this.setPasswordBlurTrue.bind(this);
-        this.setPasswordBlurFalse = this.setPasswordBlurFalse.bind(this);
+        this.checkSuccessEmail = this.checkSuccessEmail.bind(this);
+        this.checkSuccessPassword = this.checkSuccessPassword.bind(this);
         this.checkBox = this.checkBox.bind(this);
-        this.setPasswordBlurFalse = this.setPasswordBlurFalse.bind(this);
         this.uncheckBox = this.uncheckBox.bind(this);
         this.onSignupClick = this.onSignupClick.bind(this);
+        this.resetModal = this.resetModal.bind(this);
     }
 
     onInput() {
@@ -57,6 +55,12 @@ export default class CreatorModal extends React.Component {
     outOfInput() {
         this.setState({
             inputFocused: false
+        })
+    }
+
+    changeInput(e) {
+        this.setState({
+            [e.target.name]: e.target.value
         })
     }
 
@@ -112,12 +116,6 @@ export default class CreatorModal extends React.Component {
                 classPassword: 'jcc-email-pw-label'
             })
         }
-    }
-
-    changeInput(e) {
-        this.setState({
-            [e.target.name]: e.target.value
-        })
     }
 
     setEmailBlurTrue() {
@@ -291,25 +289,7 @@ export default class CreatorModal extends React.Component {
         }
     }
 
-    resetModal() {
-        this.setState({
-            isToolTipVisible: false,
-            email: null,
-            password: null,
-            emailStatus: 'jcc-input',
-            passwordStatus: 'jcc-input',
-            emailErr: null,
-            passwordErr: null,
-            emailBlur: false,
-            passwordBlur: false,
-            isValidEmail: null,
-            isValidPassword: null,
-            isBoxChecked: null
-        })
-        setTimeout(this.returnEmailPos, 0)
-        setTimeout(this.returnPasswordPos, 0)
-    }
-
+    
     renderToolTip() {
         if (this.state.isToolTipVisible === true) {
             return (
@@ -328,7 +308,7 @@ export default class CreatorModal extends React.Component {
             return null;
         }
     }
-
+    
     checkBox() {
         if (this.state.isBoxChecked === null) {
             this.setState({
@@ -340,7 +320,7 @@ export default class CreatorModal extends React.Component {
             })
         }
     }
-
+    
     uncheckBox() {
         if (this.state.isBoxChecked === true) {
             this.setState({
@@ -348,25 +328,25 @@ export default class CreatorModal extends React.Component {
             })
         }
     }
-
+    
     fillCheckbox() {
         if (this.state.isBoxChecked === true) {
             return (
                 <img src="https://img.icons8.com/material-sharp/24/000000/checked-checkbox.png" />
-            )
+                )
+            }
         }
-    }
-
-    renderCheckboxErr() {
-        if (this.state.isBoxChecked === false) {
-            return (
-                <div className="age-error">
+        
+        renderCheckboxErr() {
+            if (this.state.isBoxChecked === false) {
+                return (
+                    <div className="age-error">
                     You are too young to register / order
                 </div>
             )
         }
     }
-
+    
     onSignupClick() {
         if (this.state.email === null) {
             this.setState({
@@ -375,7 +355,7 @@ export default class CreatorModal extends React.Component {
                 emailErr: true
             })
         }
-
+        
         if (this.state.password === null) {
             this.setState({
                 password: '',
@@ -383,14 +363,32 @@ export default class CreatorModal extends React.Component {
                 passwordErr: true
             })
         }
-
+        
         if (this.state.isBoxChecked === null) {
             this.setState({
                 isBoxChecked: false
             })
         }
     }
-
+    
+    resetModal() {
+        this.setState({
+            isToolTipVisible: false,
+            email: null,
+            password: null,
+            emailStatus: 'jcc-input',
+            passwordStatus: 'jcc-input',
+            emailErr: null,
+            passwordErr: null,
+            emailBlur: false,
+            passwordBlur: false,
+            isValidEmail: null,
+            isValidPassword: null,
+            isBoxChecked: null
+        })
+        setTimeout(this.returnEmailPos, 0)
+        setTimeout(this.returnPasswordPos, 0)
+    }
 
     render() {
         if (this.props.isModalVisible === true) {

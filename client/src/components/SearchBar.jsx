@@ -122,11 +122,11 @@ export default class SearchBar extends React.Component {
     renderX(){
         if(this.state.currentInput.length > 0){
             return (
-                <img src="https://img.icons8.com/ios-filled/50/000000/multiply.png"/>
+                <img src="https://adidas-fec.s3-us-west-1.amazonaws.com/Static+Images/close-x-mark.png"/>
             )
         }else{
             return (
-                <img src="https://img.icons8.com/ios-filled/50/000000/search.png" />
+                <img src="https://adidas-fec.s3-us-west-1.amazonaws.com/Static+Images/search-icon.png" />
             )
         }
     }
@@ -160,7 +160,7 @@ export default class SearchBar extends React.Component {
                 </div>
                 <div className="bag-icon">
                     <div className="bag-icon-container">
-                        <img src="https://img.icons8.com/small/50/000000/shopping-bag.png" />
+                        <img src="https://adidas-fec.s3-us-west-1.amazonaws.com/Static+Images/shopping-bag-icon.png" />
                         <span className="empty-bag">YOUR BAG IS EMTPY</span>
                     </div>
                 </div>

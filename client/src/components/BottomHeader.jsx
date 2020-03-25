@@ -18,7 +18,7 @@ export default class BottomHeader extends React.Component {
     render() {
         return (
             <div className="header-bottom-container">
-                <img className="left-menu-logo" src="https://www.freepnglogos.com/uploads/adidas-logo-png-black-0.png" />
+                <img className="left-menu-logo" src="https://adidas-fec.s3-us-west-1.amazonaws.com/Static+Images/adidas-logo-png-black-0.png" />
                 <div className="main-menu">
                     <MenMenu />
                     <WomenMenu />
