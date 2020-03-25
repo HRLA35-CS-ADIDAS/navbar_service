@@ -12,7 +12,7 @@ const adidasSchema = new mongoose.Schema({
     price: String,
     sale_price: String,
     crossed_price: String
-  });
+});
 
 const Items = mongoose.model('Items', adidasSchema);
 
