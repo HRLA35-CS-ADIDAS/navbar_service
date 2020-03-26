@@ -765,7 +765,7 @@ form{
   ========================================
 */
 
-.footer{
+#footer{
     margin-top: 80px;
 }
 
@@ -1003,7 +1003,8 @@ form{
 }
 
 .footer-link-separator{
-    padding-right: 21px;
+    padding-right: 10px;
+    padding-left: 10px;
 }
 
 .footer-links-list p{
