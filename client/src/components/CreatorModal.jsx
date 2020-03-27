@@ -220,11 +220,13 @@ export default class CreatorModal extends React.Component {
     validateEmail() {
         if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.state.email)) {
             this.setState({
-                isValidEmail: true
+                isValidEmail: true,
+                emailErr: false
             })
         } else {
             this.setState({
-                isValidEmail: false
+                isValidEmail: false,
+                emailErr: true
             })
         }
     }
@@ -232,11 +234,13 @@ export default class CreatorModal extends React.Component {
     validatePassword() {
         if (/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})/.test(this.state.password)) {
             this.setState({
-                isValidPassword: true
+                isValidPassword: true,
+                passwordErr: false
             })
         } else {
             this.setState({
-                isValidPassword: false
+                isValidPassword: false,
+                passwordErr: true
             })
         }
     }
@@ -352,7 +356,8 @@ export default class CreatorModal extends React.Component {
             this.setState({
                 email: '',
                 emailBlur: true,
-                emailErr: true
+                emailErr: true,
+                emailStatus: 'jcc-input-error'
             })
         }
         
@@ -360,7 +365,8 @@ export default class CreatorModal extends React.Component {
             this.setState({
                 password: '',
                 passwordBlur: true,
-                passwordErr: true
+                passwordErr: true,
+                passwordStatus: 'jcc-input-error'
             })
         }
         
