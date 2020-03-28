@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
-mongoose.connect('mongodb://localhost/sample_adidas_data', {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect('mongodb://mongo:27017/sample_adidas_data', {useNewUrlParser: true, useUnifiedTopology: true})
   .then(()=> {console.log('Connected to Mongo')})
 
 const adidasSchema = new mongoose.Schema({
