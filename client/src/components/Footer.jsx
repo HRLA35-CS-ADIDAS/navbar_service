@@ -2,24 +2,24 @@ import React from 'react';
 
 const Footer = () => {
     return(
-        <div class="footer-container">
-            <div class="footer-news">
-                <div class="footer-news-container">
-                    <div class="footer-col">
+        <div className="footer-container">
+            <div className="footer-news">
+                <div className="footer-news-container">
+                    <div className="footer-col">
                         <h4>STAY IN THE KNOW WITH ADIDAS!</h4>
                     </div>
-                    <div class="footer-col">
-                        <button class="black-signup">
+                    <div className="footer-col">
+                        <button className="black-signup">
                             <span>SIGN UP</span>
                         </button>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <div class="footer-bottom-wrapper">
-                    <div class="footer-bottom-container">
-                        <div class="footer-content">
-                            <div class="content-wrapper">
+            <div className="footer-bottom">
+                <div className="footer-bottom-wrapper">
+                    <div className="footer-bottom-container">
+                        <div className="footer-content">
+                            <div className="content-wrapper">
                                 <ul>
                                     <li>
                                         <h5>PRODUCTS</h5>
@@ -95,29 +95,29 @@ const Footer = () => {
                                     <li><a>Gift Cards</a></li>
                                 </ul>
                             </div>
-                            <div class="content-wrapper assistance">
+                            <div className="content-wrapper assistance">
                                 <p>For assistance, please contact us at (800) 982-9337</p>
                             </div>
                         </div>
-                        <div class="footer-copy">
-                            <div class="footer-copy-inner">
-                                <div class="footer-country">
-                                    <a class="country-selector">
-                                        <img class="country-selector-flag"
+                        <div className="footer-copy">
+                            <div className="footer-copy-inner">
+                                <div className="footer-country">
+                                    <a className="country-selector">
+                                        <img className="country-selector-flag"
                                             src="https://adl-foundation.adidas.com/prod/v28.0.0/assets/flags/us.svg" />
                                         <span>USA</span>
                                     </a>
                                 </div>
-                                <div class="footer-links">
-                                    <ol class="footer-links-list">
+                                <div className="footer-links">
+                                    <ol className="footer-links-list">
                                         <li><a>Data settings</a></li>
-                                        <li><span class="footer-link-separator">|</span></li>
+                                        <li><span className="footer-link-separator">|</span></li>
                                         <li><a>Do not sell my personal information</a></li>
-                                        <li><span class="footer-link-separator">|</span></li>
+                                        <li><span className="footer-link-separator">|</span></li>
                                         <li><a>Privacy Policy</a></li>
-                                        <li><span class="footer-link-separator">|</span></li>
+                                        <li><span className="footer-link-separator">|</span></li>
                                         <li><a>Terms and Conditions</a></li>
-                                        <li><span class="footer-link-separator">|</span></li>
+                                        <li><span className="footer-link-separator">|</span></li>
                                         <li>
                                             <p>© 2020 adidas America Inc.</p>
                                         </li>
